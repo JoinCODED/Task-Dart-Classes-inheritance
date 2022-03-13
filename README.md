@@ -1,33 +1,32 @@
-# TASK-NAME
+# Loyal Customers 🤵‍♂️
 
-This is the template for tasks. These repos are the starting points and instructions for students to explore a concept.
+Givin the following class:
 
-## Instructions
-- Fork and clone [this repository](https://github.com/JoinCODED/{REPO_NAME}) to your `Development` folder.
+```dart
+void main() {
+final customer = Customer("Khalid");
+customer.add(54.5);
+customer.add(12.2);
+print(customer.getPurchaseAmount());
+}
 
-## Objective and end result
-- Write the objective of the task.
-- If there are any images, make sure you resize them to around 880px maximum width. **Don't add big images**
+class Customer{
+    String name;
+    double purchaseAmount = 0;
 
-![screenshot](https://tenor.com/xNjE.gif)
+    Customer(this.name);
 
+    void add(double price){
+        purchaseAmount += price;
+    }
 
-### 🍋 The basic challenge title
+    double getPurchaseAmount() {
+        return purchaseAmount;
+    }
+}
+```
 
-- Step 1
-- Step 2
-- Step 3
-
-
-### 🤼‍♂️ The hard challenge title
-
-- Step 1
-- Step 2
-- Step 3
-
-
-### 🌶 The Extreme challenge title 
-
-- Step 1
-- Step 2
-- Step 3
+1. Set the `purchaseAmount` as private.
+2. Create a class `LoyalCustomer` that extends `Customer`.
+3. Create a constructor for the subclass.
+4. Override the `getPurchaseAmount` to give the loyal customer a discount of 10%.
